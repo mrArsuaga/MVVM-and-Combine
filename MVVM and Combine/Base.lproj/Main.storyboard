@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="FJP-Ss-9bP">
             <objects>
-                <viewController id="Fa9-7A-WMH" customClass="LoginViewController" customModule="MVVM_Example" sceneMemberID="viewController">
+                <viewController id="Fa9-7A-WMH" customClass="LoginViewController" customModule="MVVM_and_Combine" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tbu-0P-VAe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,8 +61,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="5NN-Wd-Iyr" id="0fL-fO-40g"/>
-                        <outlet property="passwordTextField" destination="BBM-xO-jL1" id="zJH-xD-RXj"/>
+                        <outlet property="emailTextField" destination="5NN-Wd-Iyr" id="XO3-Ii-hyP"/>
+                        <outlet property="passwordTextField" destination="BBM-xO-jL1" id="g8P-jw-TH9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p4j-H2-JY5" sceneMemberID="firstResponder"/>
@@ -72,7 +72,7 @@
         <!--Home View Controller-->
         <scene sceneID="i8q-JT-Jsz">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mhX-yQ-w36" customClass="HomeViewController" customModule="MVVM_Example" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mhX-yQ-w36" customClass="HomeViewController" customModule="MVVM_and_Combine" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rX1-C3-xeD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
