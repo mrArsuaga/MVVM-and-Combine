@@ -6,7 +6,15 @@
 //
 
 import Foundation
+import Combine
 
 final class HomeViewModel {
+    @Published var message: String = ""
+    
+    func createWelcomeMessage() {
+        guard let user = NetworkService.shared.getUser() else { return }
+        message = "\(user.firstName) \(user.lastName)"
+    }
+    
     
 }

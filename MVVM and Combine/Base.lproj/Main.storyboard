@@ -83,16 +83,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfp-bZ-CZv">
+                                <rect key="frame" x="20" y="64" width="374" height="37"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M2y-gE-Az0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aUA-br-hB6" firstAttribute="centerY" secondItem="rX1-C3-xeD" secondAttribute="centerY" id="Aby-R4-9aC"/>
+                            <constraint firstItem="aUA-br-hB6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dfp-bZ-CZv" secondAttribute="bottom" constant="20" id="LtG-fh-6kh"/>
+                            <constraint firstItem="dfp-bZ-CZv" firstAttribute="top" secondItem="M2y-gE-Az0" secondAttribute="top" constant="20" id="Tms-Km-O1L"/>
+                            <constraint firstItem="M2y-gE-Az0" firstAttribute="trailing" secondItem="dfp-bZ-CZv" secondAttribute="trailing" constant="20" id="WoC-RC-cqW"/>
+                            <constraint firstItem="dfp-bZ-CZv" firstAttribute="leading" secondItem="M2y-gE-Az0" secondAttribute="leading" constant="20" id="kfs-ME-RKx"/>
                             <constraint firstItem="aUA-br-hB6" firstAttribute="centerX" secondItem="rX1-C3-xeD" secondAttribute="centerX" id="qfN-FB-Cr7"/>
+                            <constraint firstItem="dfp-bZ-CZv" firstAttribute="centerX" secondItem="rX1-C3-xeD" secondAttribute="centerX" id="uFp-Sf-f7e"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="welcomeLabel" destination="aUA-br-hB6" id="vcN-HJ-beQ"/>
+                        <outlet property="welcomeLabelAssign" destination="dfp-bZ-CZv" id="o34-82-Txu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qvx-PM-G1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

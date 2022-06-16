@@ -25,4 +25,8 @@ class NetworkService {
             }
         }
     }
+    
+    func getUser() -> User? {
+        user
+    }
 }

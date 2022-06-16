@@ -6,26 +6,41 @@
 //
 
 import UIKit
+import Combine
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet private weak var welcomeLabelAssign: UILabel!
     @IBOutlet private weak var welcomeLabel: UILabel!
+    let viewModel = HomeViewModel()
+    var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupBinders()
+        viewModel.createWelcomeMessage()
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupBinders() {
+        viewModel
+            .$message
+            .dropFirst()
+            .map({ message in
+                "Hello \(message)"
+            })
+            .sink { message in
+                self.welcomeLabel.text = message
+            }.store(in: &cancellables)
+        
+        viewModel
+            .$message
+            .dropFirst()
+            .map({ message in
+                "Assign \(message)"
+            })
+            .map { "Shorthand Argument: \n \($0)" }
+            .assign(to: \.text, on: welcomeLabelAssign)
+            .store(in: &cancellables)
     }
-    */
-
 }
