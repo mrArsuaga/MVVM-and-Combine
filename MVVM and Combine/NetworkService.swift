@@ -14,9 +14,9 @@ class NetworkService {
     
     private init() { }
     
-    func login(email: String, password: String, completion: @escaping (Bool) -> Void) {
+    func login(_ credentials: Credentials, completion: @escaping (Bool) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
-            if email.elementsEqual("test@test.com") && password.elementsEqual("password") {
+            if credentials.email.elementsEqual("test@test.com") && credentials.password.elementsEqual("password") {
                 self?.user = User(firstName: "Jose", lastName: "Arsuaga")
                 completion(true)
             } else {
@@ -24,5 +24,9 @@ class NetworkService {
                 completion(false)
             }
         }
+    }
+    
+    func getUser() -> User? {
+        user
     }
 }

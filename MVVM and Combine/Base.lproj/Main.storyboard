@@ -83,21 +83,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGI-JP-NcX">
+                                <rect key="frame" x="8" y="64" width="398" height="37"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M2y-gE-Az0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aUA-br-hB6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qGI-JP-NcX" secondAttribute="bottom" constant="20" id="7Hp-mn-ziF"/>
                             <constraint firstItem="aUA-br-hB6" firstAttribute="centerY" secondItem="rX1-C3-xeD" secondAttribute="centerY" id="Aby-R4-9aC"/>
+                            <constraint firstItem="M2y-gE-Az0" firstAttribute="trailing" secondItem="qGI-JP-NcX" secondAttribute="trailing" constant="8" id="OJh-LG-QMZ"/>
+                            <constraint firstItem="qGI-JP-NcX" firstAttribute="top" secondItem="M2y-gE-Az0" secondAttribute="top" constant="20" id="fa7-1X-Tyc"/>
+                            <constraint firstItem="qGI-JP-NcX" firstAttribute="leading" secondItem="M2y-gE-Az0" secondAttribute="leading" constant="8" id="jgB-o8-43j"/>
                             <constraint firstItem="aUA-br-hB6" firstAttribute="centerX" secondItem="rX1-C3-xeD" secondAttribute="centerX" id="qfN-FB-Cr7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="welcomeLabel" destination="aUA-br-hB6" id="vcN-HJ-beQ"/>
+                        <outlet property="welcomeLabelAssing" destination="qGI-JP-NcX" id="bYG-GR-2xa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qvx-PM-G1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="462" y="-382"/>
+            <point key="canvasLocation" x="460.86956521739131" y="-382.36607142857139"/>
         </scene>
     </scenes>
     <resources>
